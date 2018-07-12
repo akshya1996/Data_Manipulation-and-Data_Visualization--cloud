@@ -1,0 +1,154 @@
+<html>
+<head>
+<style type="text/css">
+b{
+	color:red;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<h4>Akshya Srinivasa Raghavan</h4>
+<h4>1001547268</h4>
+<h1>K means clustering</h1>
+<p>When one attribute is a string</p>
+<form method="post" action="{{ url_for('upload') }}" class="form-group">
+<!-- <input type="file" name="uploadfile"><br> -->
+<label>Atrribute 1:</label>
+<select name="attribute1">
+  <option value="CabinNum">CabinNum</option>
+  <option value="Age">Age</option>
+    <option value="Lat">Lat</option>
+	  <option value="Long">Long</option>
+	    <option value="Fare">Fare</option>
+</select>
+<br>
+<label>String Atrribute 2:</label>
+<select name="attribute2">
+  <option value="Fname" >Fname</option>
+  <option value="Lname">Lname</option>
+    <option value="Survived">Survived</option>
+
+</select>
+<br>
+<label>Clusters:</label><input type="text" name="cluster"><br>
+<input type="submit" value="Upload File" class="btn btn-primary"><br>
+</form>
+<p>When both attributes are numbers</p>
+<form method="post" action="{{ url_for('nupload') }}" class="form-group">
+<!-- <input type="file" name="uploadfile"><br> -->
+<label>Atrribute 1:</label>
+<select name="attribute1">
+  <option value="CabinNum">CabinNum</option>
+  <option value="Age">Age</option>
+    <option value="Lat" >Lat</option>
+	  <option value="Long">Long</option>
+	    <option value="Fare">Fare</option>
+</select>
+<br>
+<label>Atrribute 2:</label>
+<select name="attribute2">
+  <option value="CabinNum" >CabinNum</option>
+  <option value="Age" >Age</option>
+    <option value="Lat" >Lat</option>
+	  <option value="Long" >Long</option>
+	    <option value="Fare">Fare</option>
+</select>
+<br>
+<label>Clusters:</label><input type="text" name="cluster"><br>
+<input type="submit" value="Upload File" class="btn btn-primary"><br>
+</form>
+<p>When both attributes are strings</p>
+<form method="post" action="{{ url_for('supload') }}" class="form-group">
+<!-- <input type="file" name="uploadfile"><br> -->
+<label>String Atrribute 1:</label>
+<select name="attribute1">
+  <option value="Fname">Fname</option>
+  <option value="Lname">Lname</option>
+    <option value="Survived" name="attribute1">Survived</option>
+
+</select>
+<br>
+<label>String Atrribute 2:</label>
+<select name="attribute2">
+  <option value="Fname">Fname</option>
+  <option value="Lname">Lname</option>
+    <option value="Survived" name="attribute2">Survived</option>
+
+</select>
+<br>
+<label>Clusters:</label><input type="text" name="cluster"><br>
+<input type="submit" value="Upload File" class="btn btn-primary"><br>
+</form>
+<div>
+{% if timeelapsed %}
+Time elapsed:{{ timeelapsed }}
+{% endif %}
+{% if fileinfo %}
+<img src="{{fileinfo}}" style="width:500px;height:500px;"/>
+{% endif %}
+</div>
+<table>
+<tr>
+<th>Distance</th>
+<th>Number of points</th>
+<th>centroids</th>
+</tr>
+{% if distance %}
+{% for v1,v2,v3 in fields  %}
+<tr>
+<td>
+{{v1}}
+</td>
+<td>
+{{v2}}
+</td>
+<td>
+{{v3}}
+</td>
+</tr>
+{% endfor %}
+{% endif %}
+</table>
+<h2>PIE CHART and BAR GRAPHS</h2>
+<p>Pie Graph to show number of female survivors</p>
+<form method="post" action="{{ url_for('piechartforfemalesurvivors') }}" class="form-group">
+
+<input type="submit" value="Show Pie Chart" class="btn btn-primary"><br>
+</form>
+<div><strong>
+{% if pietime %}
+Time elapsed:{{ pietime }}
+{% endif %}
+{% if piefileinfo %}</strong><br>
+<img src="{{piefileinfo}}" style="width:500px;height:500px;"/>
+{% endif %}
+</div>
+
+<p>Bar Graph to show number of male survivors</p>
+<form method="post" action="{{ url_for('barchartformalesurvivors') }}" class="form-group">
+
+<input type="submit" value="Show Bar Graph" class="btn btn-primary"><br>
+</form>
+<div><strong>
+{% if bartime %}
+Time elapsed:{{ bartime }}
+{% endif %}
+{% if barfileinfo %}</strong><br>
+<img src="{{barfileinfo}}" style="width:500px;height:500px;"/>
+{% endif %}
+</div>
+
+</body>
+</html>

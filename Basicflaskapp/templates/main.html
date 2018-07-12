@@ -1,0 +1,466 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+
+</style>
+</head>
+<body>
+
+
+<h1>Akshya Srinivasa Raghavan 1001547268</h1>
+<img src="https://www.gstatic.com/webp/gallery3/1.png" alt="me">
+<p>**************************************************************************************************************************************</p>
+<h1>Upload File on IBM Bluemix RDBMS Example</h1>
+<form method="post" action="{{ url_for('upload') }}" class="form-group">
+<input type="file" name="uploadfile"><br>
+<input type="submit" value="Upload File" class="btn btn-primary"><br>
+<div><b>
+{% if message1 %}
+{{ message1 }}
+{% endif %}
+</b></div>
+</form>
+
+
+
+<h1>Upload Earthquake File on IBM Bluemix RDBMS</h1>
+<form method="post" action="{{ url_for('excelupload') }}" class="form-group">
+<input type="file" name="excelfile"><br>
+<input type="submit" value="Upload Excel File" class="btn btn-primary"><br>
+<div><b>
+{% if count %}
+{{ count }}
+{% endif %}<br>
+{% if message2 %}
+{{ message2 }}
+{% endif %}
+</b></div>
+</form>
+
+<p>*************************************************************************************************************************************************</p>
+
+<h1>Magnitude of earthquakes greater than the given value</h1>
+<form method="post" action="{{ url_for('greaterthanmag') }}" class="form-group">
+<input type="text" name="magval"><br>
+<input type="submit" value="Find earthquake" class="btn btn-primary"><br>
+<div><b>
+<p>The number of earthquakes more than the given val is:
+{% if count1 %}
+{{ count1 }}
+{% endif %}<br>
+</b></div>
+<table style="width:100%">
+{% if data7 %}
+{% for values1 in data7 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+</form>
+
+<p>********************************************************************************************************************</p>
+
+<h6>Find earthquakes near a specified location </h6>
+<form method="post" action="{{ url_for('nearlocation') }}" class="form-group">
+<label>Location</label><input type="text" name="location"><br>
+<label>Distance</label><input type="text" name="distance"><br>
+<input type="submit" value="Find earthquake" class="btn btn-primary"><br>
+<div><b>
+<p>The number of earthquakes near the given location is:
+{% if count2 %}
+{{ count2 }}
+{% endif %}<br>
+</b></div>
+<div><b>
+<p>The Distance:
+{% if distance %}
+{{ distance }}
+{% endif %}<br>
+</b></div>
+<table style="width:100%">
+{% if data8 %}
+{% for values1 in data8 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>	
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+</form>
+
+
+
+<p>********************************************************************************************************************</p>
+
+<h6>Find earthquakes near location and magnitude </h6>
+<form method="post" action="{{ url_for('locmag') }}" class="form-group">
+<label>Location</label><input type="text" name="location"><br>
+<label>From Magnitude</label><input type="text" name="fmagnitude"><br>
+<label>To Magnitude</label><input type="text" name="tmagnitude"><br>
+<input type="submit" value="Find earthquake" class="btn btn-primary"><br>
+<div><b>
+<p>The number of earthquakes near the given location is:
+{% if count100 %}
+{{ count100 }}
+{% endif %}<br>
+</b></div>
+<div><b>
+</b></div>
+<table style="width:100%">
+{% if data100 %}
+{% for values1 in data100 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+</form>
+
+
+
+
+
+
+<p>************************************************************************************************************************************</p>
+<h6>Find earthquakes within a range</h6>
+<form method="post" action="{{ url_for('withinrange') }}" class="form-group">
+<label>From Range</label><input type="text" name="range1"><br>
+<label>To Range</label><input type="text" name="range2"><br>
+<label>Select type of search :</label>
+<select name="typeofsearch">
+  <option value="day">day</option>
+  <option value="week">week</option>
+  <option value="month">month</option>
+</select>
+<input type="submit" value="Find earthquake" class="btn btn-primary"><br>
+<div><b>
+<p>The number of earthquakes near the given location is:
+{% if count3 %}
+{{ count3 }}
+{% endif %}<br>
+</b></div>
+<table style="width:100%">
+{% if data9 %}
+{% for values1 in data9 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+</form>
+
+
+
+<p>******************************************************************************************************************************************</p>
+
+<h4>Do earthquakes occur more at night </h4>
+<form method="post" action="{{ url_for('morequakes') }}" class="form-group">
+<input type="text" name="mag"><br>
+<input type="submit" value="Execute Query" class="btn btn-primary"><br>
+<div><b>
+<p>The number of earthquakes that occur at night is:
+{% if count4 %}
+{{ count4 }}
+{% endif %}<br>
+</b></div>
+<p>The number of earthquakes that occur during daytime is:
+{% if count5 %}
+{{ count5 }}
+{% endif %}<br>
+</b></div>
+<p>Final Result:
+{% if queryres %}
+{{ queryres }}
+{% endif %}<br>
+</b></div>
+
+<table style="width:100%">
+{% if data10 %}
+{% for values1 in data10 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+</form>
+
+<h4>clustering of earthquakes</h4>
+<form method="post" action="{{ url_for('clustering') }}" class="form-group">
+<input type="text" name="cluster"><br>
+<input type="submit" value="Find Clusters" class="btn btn-primary"><br>
+</form>
+<p>Earthquakes between 2 and 3</p>
+<table style="width:100%">
+{% if data11 %}
+{% for values1 in data11 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+<p>Earthquakes between 3.1 and 4</p>
+<table style="width:100%">
+{% if data12 %}
+{% for values1 in data12 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+<p>Earthquakes between 4.1 and 5</p>
+<table style="width:100%">
+{% if data13 %}
+{% for values1 in data13 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+<p>Earthquakes between 5.1 and 6</p>
+<table style="width:100%">
+{% if data14 %}
+{% for values1 in data14 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+
+<p>*****************************************************************************************************************************************</p>
+<h4>clustering of earthquakes</h4>
+<form method="post" action="{{ url_for('latclustering') }}" class="form-group">
+<label>Latitude:</label><input type="text" name="latitude"><br>
+<label>Range:</label><input type="text" name="range"><br>
+<input type="submit" value="Find Clusters" class="btn btn-primary"><br>
+</form>
+<p>Earthquakes within this cluster</p>
+<table style="width:100%">
+{% if data20 %}
+{% for values1 in data20 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+
+
+
+
+<h4>LAST</h4>
+<form method="post" action="{{ url_for('latlon') }}" class="form-group">
+<label>Latitude:</label><input type="text" name="latitude"><br>
+<label>Longitude:</label><input type="text" name="longitude"><br>
+<label>Range:</label><input type="text" name="range"><br>
+<input type="submit" value="Find Clusters" class="btn btn-primary"><br>
+</form>
+<p>Earthquakes within this cluster</p>
+<table style="width:100%">
+
+{% if data20 %}
+{% for values1 in data20 %}
+
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+		
+  </tr>
+
+{% endfor %}
+{% endif %}
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

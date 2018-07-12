@@ -1,0 +1,116 @@
+2018-07-03 11:46:31,404 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2018-07-03 11:46:31,430 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2018-07-03 11:46:31,431 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2018-07-03 11:46:31,441 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2018-07-03 11:46:31,441 INFO o.a.j.JMeter: Version 4.0 r1823414
+2018-07-03 11:46:31,441 INFO o.a.j.JMeter: java.version=1.8.0_171
+2018-07-03 11:46:31,442 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-07-03 11:46:31,442 INFO o.a.j.JMeter: os.name=Windows 10
+2018-07-03 11:46:31,442 INFO o.a.j.JMeter: os.arch=amd64
+2018-07-03 11:46:31,442 INFO o.a.j.JMeter: os.version=10.0
+2018-07-03 11:46:31,442 INFO o.a.j.JMeter: file.encoding=Cp1252
+2018-07-03 11:46:31,442 INFO o.a.j.JMeter: Max memory     =1073741824
+2018-07-03 11:46:31,442 INFO o.a.j.JMeter: Available Processors =8
+2018-07-03 11:46:31,448 INFO o.a.j.JMeter: Default Locale=English (EN)
+2018-07-03 11:46:31,448 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2018-07-03 11:46:31,449 INFO o.a.j.JMeter: JMeterHome=C:\Users\akshya1996\Desktop\backup code\Quiz6\apache-jmeter-4.0
+2018-07-03 11:46:31,449 INFO o.a.j.JMeter: user.dir  =C:\Users\akshya1996\Desktop\backup code\Quiz6\apache-jmeter-4.0\bin
+2018-07-03 11:46:31,449 INFO o.a.j.JMeter: PWD       =C:\Users\akshya1996\Desktop\backup code\Quiz6\apache-jmeter-4.0\bin
+2018-07-03 11:46:31,458 INFO o.a.j.JMeter: IP: 10.182.53.137 Name: DESKTOP-AP60IAA FullName: 10.182.53.137
+2018-07-03 11:46:31,720 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2018-07-03 11:46:31,744 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2018-07-03 11:46:31,745 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2018-07-03 11:46:31,859 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2018-07-03 11:46:32,423 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-07-03 11:46:32,423 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-07-03 11:46:33,969 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-03 11:46:33,970 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-03 11:46:33,970 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-03 11:46:33,970 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-03 11:46:33,970 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-07-03 11:46:33,970 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-07-03 11:46:34,128 INFO o.a.j.e.KeyToolUtils: Exception checking for keytool existence, will return false, try another way.
+2018-07-03 11:46:34,429 INFO o.a.j.e.KeyToolUtils: keytool found at 'C:\Program Files\Java\jre1.8.0_171\bin\keytool'
+2018-07-03 11:46:34,429 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file C:\Users\akshya1996\Desktop\backup code\Quiz6\apache-jmeter-4.0\bin\proxyserver.jks
+2018-07-03 11:46:34,595 INFO o.a.j.s.FileServer: Default base='C:\Users\akshya1996\Desktop\backup code\Quiz6\apache-jmeter-4.0\bin'
+2018-07-03 11:46:35,413 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-07-03 11:46:35,413 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2018-07-03 11:46:35,413 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-07-03 11:46:35,413 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-07-03 11:46:57,192 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2018-07-03 11:47:58,684 INFO o.a.j.s.FileServer: Set new base='C:\Users\akshya1996\Desktop\backup code\Quiz6\apache-jmeter-4.0\bin'
+2018-07-03 11:47:59,204 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-07-03 11:47:59,235 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-07-03 11:47:59,236 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2018-07-03 11:47:59,275 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-07-03 11:47:59,276 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-07-03 11:47:59,277 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-07-03 11:47:59,283 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-07-03 11:47:59,418 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2018-07-03 11:47:59,419 INFO o.a.j.e.StandardJMeterEngine: Starting 20 threads for group Thread Group.
+2018-07-03 11:47:59,419 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-07-03 11:47:59,419 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=20 ramp-up=5 perThread=250.0 delayedStart=false
+2018-07-03 11:47:59,426 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2018-07-03 11:47:59,449 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-07-03 11:47:59,449 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-07-03 11:47:59,681 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2018-07-03 11:47:59,747 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2018-07-03 11:47:59,747 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2018-07-03 11:47:59,930 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2018-07-03 11:47:59,983 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2018-07-03 11:47:59,983 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2018-07-03 11:48:00,178 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2018-07-03 11:48:00,233 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
+2018-07-03 11:48:00,233 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
+2018-07-03 11:48:00,440 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
+2018-07-03 11:48:00,480 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-4
+2018-07-03 11:48:00,480 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
+2018-07-03 11:48:00,690 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-6
+2018-07-03 11:48:00,741 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-5
+2018-07-03 11:48:00,742 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-5
+2018-07-03 11:48:00,942 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-7
+2018-07-03 11:48:00,991 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-6
+2018-07-03 11:48:00,991 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-6
+2018-07-03 11:48:01,193 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-8
+2018-07-03 11:48:01,243 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-7
+2018-07-03 11:48:01,243 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-7
+2018-07-03 11:48:01,445 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-9
+2018-07-03 11:48:01,494 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-8
+2018-07-03 11:48:01,494 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-8
+2018-07-03 11:48:01,695 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-10
+2018-07-03 11:48:01,747 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-9
+2018-07-03 11:48:01,747 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-9
+2018-07-03 11:48:01,946 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-11
+2018-07-03 11:48:01,996 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-10
+2018-07-03 11:48:01,998 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-10
+2018-07-03 11:48:02,197 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-12
+2018-07-03 11:48:02,247 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-11
+2018-07-03 11:48:02,247 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-11
+2018-07-03 11:48:02,446 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-13
+2018-07-03 11:48:02,498 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-12
+2018-07-03 11:48:02,498 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-12
+2018-07-03 11:48:02,698 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-14
+2018-07-03 11:48:02,748 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-13
+2018-07-03 11:48:02,748 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-13
+2018-07-03 11:48:02,949 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-15
+2018-07-03 11:48:02,999 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-14
+2018-07-03 11:48:02,999 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-14
+2018-07-03 11:48:03,199 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-16
+2018-07-03 11:48:03,250 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-15
+2018-07-03 11:48:03,250 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-15
+2018-07-03 11:48:03,448 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-17
+2018-07-03 11:48:03,499 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-16
+2018-07-03 11:48:03,499 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-16
+2018-07-03 11:48:03,699 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-18
+2018-07-03 11:48:03,749 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-17
+2018-07-03 11:48:03,749 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-17
+2018-07-03 11:48:03,950 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-19
+2018-07-03 11:48:04,000 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-18
+2018-07-03 11:48:04,000 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-18
+2018-07-03 11:48:04,200 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-20
+2018-07-03 11:48:04,255 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-19
+2018-07-03 11:48:04,255 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-19
+2018-07-03 11:48:04,502 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-20
+2018-07-03 11:48:04,502 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-20
+2018-07-03 11:48:04,503 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-07-03 11:48:04,504 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

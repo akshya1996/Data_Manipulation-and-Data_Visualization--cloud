@@ -1,0 +1,119 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Akshya Srinivasa Raghavan 1001547268</h1>
+
+<!-- 
+<p>Select Files from original to copy </p>
+<form action="" method="post">
+<label>File Names:</label>
+<select name="filename">
+{% for names in dirs %}
+<option value="{{ names[0] }}">{{ names[0] }}</option>
+{% endfor %}
+</select>
+<input type="submit" value="copy file" class="btn btn-primary"><br>
+</form> -->
+
+<form method="post" action="{{ url_for('upload') }}" enctype= "multipart/form-data">
+    <h4>Please choose the image you want to upload</h4>
+    <input type="file" name="myfile"><br>
+
+    <h4>Please enter the title:</h4>
+    <input type="text" name="title" required><br><br>
+    <input type="submit">
+</form>
+<!-- <span>
+{% if data2 %}
+The picture url is :<br>
+{% for values1 in data2 %}
+{{ values1[0] }}<br>
+<img src="data:image/jpg;base64,{{ values1[0] }} style="width:200px;height:200px;"/></td>
+{% endfor %}
+{% endif %}
+</span>
+ -->
+
+
+
+<!-- <p>Select name to see picture</p>
+<form action="{{ url_for('showpictureforname') }}" method="post">
+<input type="text" name="personname">
+<input type="submit" value="Show Picture" class="btn btn-primary"><br>
+</form>
+<span>
+{% if data2 %}
+The picture url is :<br>
+{% for values1 in data2 %}
+{{ values1[0] }}<br>
+<img src="data:image/jpg;base64,{{ values1[0] }} style="width:200px;height:200px;"/></td>
+{% endfor %}
+{% endif %}
+</span>
+ -->
+<!-- 
+<p>Upload Pictures to Bucket </p>
+<form method="post" action="{{ url_for('upload') }}" class="form-group">
+<input type="file" name="uploadfile"><br>
+<input type="submit" value="Upload Image" class="btn btn-primary"><br>
+</form>
+ -->
+
+
+<p>Select grade range</p>
+<form action="{{ url_for('getnamesforgrade') }}" method="post">
+<label>From Grade:</label><input type="text" name="fromgrade">
+<br>
+<label>To Grade:</label><input type="text" name="tograde">
+<input type="submit" value="Show People" class="btn btn-primary"><br>
+</form>
+
+<p>Select Name to change keywords</p>
+<form action="{{ url_for('changekeywords') }}" method="post">
+<label>Names:</label>
+<select name="name">
+{% for names in data %}
+<option value="{{ names[0] }}">{{ names[0] }}</option>
+{% endfor %}
+</select>
+<br>
+<label>Keywords:</label><input type="text" name="modkey">
+<input type="submit" value="Modify" class="btn btn-primary"><br>
+</form>
+
+
+{% if message1 %}
+<span>{{message1}}</span>
+{% endif %}
+{% for values1 in data%}
+{{ values1[0] }}<br>
+{% endfor %}
+<span>
+{% if data2 %}
+The grade is :<br>
+{% for values1 in data2 %}
+{{ values1[0] }}<br>
+{% endfor %}
+{% endif %}
+</span>
+<p>Get Keywords for a Name</p>
+<form action="{{ url_for('getkeywords') }}" method="post">
+<label>Names:</label>
+<select name="name">
+{% for names in data %}
+<option value="{{ names[0] }}">{{ names[0] }}</option>
+{% endfor %}
+</select>
+<br>
+<input type="submit" value="Get Keyword" class="btn btn-primary"/><br>
+</form>
+{% if keywords %}
+<span>{{keywords}}</span>
+{% endif %}
+
+
+
+</body>
+</html>

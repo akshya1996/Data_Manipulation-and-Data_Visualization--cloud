@@ -1,0 +1,412 @@
+<html>
+<head>
+<style type="text/css">
+b{
+	color:red;
+}
+  <style type="text/css">
+       table {border: 1px solid black;}
+       td {border: 1px solid black;}
+    </style>
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Akshya Srinivasa Raghavan</h1>
+<h2>1001547268</h2>
+<hr style="color:red;">
+<h1>Upload File on Azure</h1>
+<a href="{{ url_for('memcache_page') }}">Memcache Run</a>
+<form method="post" action="{{ url_for('upload') }}" class="form-group">
+<input type="file" name="uploadfile"><br>
+<input type="submit" value="Upload File" class="btn btn-primary"><br>
+<div><b>
+{% if message1 %}
+{{ message1 }}
+{% endif %}
+</b></div>
+</form>
+<p>_______________________________________________________________________________________________________________</p>
+<h1>Upload New File on Azure</h1>
+<a href="{{ url_for('memcache_page') }}">Memcache Run</a>
+<form method="post" action="{{ url_for('uploadnewtable') }}" class="form-group">
+<input type="file" name="uploadnewfile"><br>
+<input type="submit" value="Upload New File" class="btn btn-primary"><br>
+<div><b>
+{% if message2 %}
+{{ message2 }}
+{% endif %}
+</b></div>
+</form>
+
+<h4>Magnitude Range  </h4>
+<form method="post" action="{{ url_for('magrange') }}" class="form-group">
+<input type="text" name="fmag"><br>
+<input type="text" name="tmag"><br>
+<input type="submit" value="Execute Query" class="btn btn-primary"><br>
+</form>
+<h4>Magnitude Range  </h4>
+<form method="post" action="{{ url_for('memcache_latrange') }}" class="form-group">
+<input type="text" name="fromlat"><br>
+<input type="text" name="tolat"><br>
+<input type="submit" value="Execute Memcache" class="btn btn-primary"><br>
+</form>
+<table style="width:100%">
+
+
+
+
+
+{% if data108 %}
+{% for values1 in data108 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+<table style="width:100%">
+{% if data109 %}
+{% for values1 in data109 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+
+</form>
+<p>Befor time stamp</p>
+{% if before1 %}
+{{before1}}
+{% endif %}
+<p>After time stamp</p>
+{% if after1 %}
+{{after1}}
+{% endif %}
+<p>total time for each query</p>
+{% if diff1 %}
+{{diff1}}
+{% endif %}
+<p>Start time stamp</p>
+{% if bef %}
+{{bef}}
+{% endif %}
+<p>End time stamp</p>
+{% if aft %}
+{{aft}}
+{% endif %}
+<p>total time</p>
+{% if d %}
+{{d}}
+{% endif %}
+
+
+
+
+
+
+
+
+
+<p>_______________________________________________________________________________________________________________</p>
+<h4>latitude and longitude with range *2 </h4>
+<a href="{{ url_for('memcache_page') }}">Memcache Run</a>
+<form method="post" action="{{ url_for('memcache_page') }}" class="form-group">
+<label>Latitude:</label><input type="text" name="latitude"><br>
+<label>Longitude:</label><input type="text" name="longitude"><br>
+<label>Range:</label><input type="text" name="range"><br>
+<input type="submit" value="Find Clusters" class="btn btn-primary"><br>
+</form>
+<form method="post" action="{{ url_for('latlon') }}" class="form-group">
+<label>Latitude:</label><input type="text" name="latitude"><br>
+<label>Longitude:</label><input type="text" name="longitude"><br>
+<label>Range:</label><input type="text" name="range"><br>
+<input type="submit" value="Find Clusters" class="btn btn-primary"><br>
+</form>
+<p>Earthquakes within this cluster</p>
+<table style="width:100%">
+
+{% if data20 %}
+{% for values1 in data20 %}
+
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+        <td>{{values1[16]}}</td>
+	<td>{{values1[17]}}</td>
+	<td>{{values1[18]}}</td>
+	<td>{{values1[19]}}</td>
+	<td>{{values1[20]}}</td>
+	<td>{{values1[21]}}</td>
+
+		
+  </tr>
+
+{% endfor %}
+{% endif %}
+</table>
+
+
+
+<p>_______________________________________________________________________________________________________________</p>
+<h4>latitude within range with increasing magnitude</h4>
+<a href="{{ url_for('memcache_latrange') }}">Memcache Run</a>
+<form method="post" action="{{ url_for('memcache_latrange') }}" class="form-group">
+<label>From Latitude:</label><input type="text" name="fromlat"><br>
+<label>To Latitude :</label><input type="text" name="tolat"><br>
+<input type="submit" value="Find Earthquakes Time " class="btn btn-primary"><br>
+</form>
+<form method="post" action="{{ url_for('latrange') }}" class="form-group">
+<label>From Latitude:</label><input type="text" name="fromlat"><br>
+<label>To Latitude:</label><input type="text" name="tolat"><br>
+<input type="submit" value="Find Earthquakes" class="btn btn-primary"><br>
+</form>
+<p>Earthquakes within this Range</p>
+<table style="width:100%">
+
+{% if data200 %}
+{% for values1 in data200 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+        <td>{{values1[16]}}</td>
+	<td>{{values1[17]}}</td>
+	<td>{{values1[18]}}</td>
+	<td>{{values1[19]}}</td>
+	<td>{{values1[20]}}</td>
+	<td>{{values1[21]}}</td>
+
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+<p>_______________________________________________________________________________________________________________</p>
+
+<h4>pattern matching query for place</h4>
+<a href="{{ url_for('memcache_findplace') }}">Memcache Run</a>
+<form method="post" action="{{ url_for('memcache_findplace') }}" class="form-group">
+<label>Place:</label><input type="text" name="place"><br>
+<input type="submit" value="Find Earthquakes Time " class="btn btn-primary"><br>
+</form>
+<form method="post" action="{{ url_for('placepattern') }}" class="form-group">
+<label>Place:</label><input type="text" name="place"><br>
+<input type="submit" value="Find Earthquakes" class="btn btn-primary"><br>
+</form>
+<p>Earthquakes within this Range</p>
+<table style="width:100%">
+
+{% if data201 %}
+{% for values1 in data201 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+        <td>{{values1[16]}}</td>
+	<td>{{values1[17]}}</td>
+	<td>{{values1[18]}}</td>
+	<td>{{values1[19]}}</td>
+	<td>{{values1[20]}}</td>
+	<td>{{values1[21]}}</td>
+
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+<p>_______________________________________________________________________________________________________________</p>
+
+<h4>finding earthquakes for the given location source for 30 days db</h4>
+<a href="{{ url_for('memcache_locsource') }}">Memcached Run</a>
+<form method="post" action="{{ url_for('memcache_locsource') }}" class="form-group">
+<label>Place:</label><input type="text" name="place"><br>
+<input type="submit" value="Find Query Time " class="btn btn-primary"><br>
+</form>
+<form method="post" action="{{ url_for('locsource') }}" class="form-group">
+<label>Place:</label><input type="text" name="place"><br>
+<input type="submit" value="Find Earthquakes" class="btn btn-primary"><br>
+</form>
+<p>Earthquakes within this Range</p>
+<table>
+
+{% if locsourcedata %}
+{% for values1 in locsourcedata %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+        <td>{{values1[16]}}</td>
+	<td>{{values1[17]}}</td>
+	<td>{{values1[18]}}</td>
+	<td>{{values1[19]}}</td>
+	<td>{{values1[20]}}</td>
+	<td>{{values1[21]}}</td>
+
+
+
+
+		
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+
+<p>_______________________________________________________________________________________________________________</p>
+
+<h4>executing 1000 queries</h4>
+<form method="post" action="{{ url_for('memcache_thousand') }}" class="form-group">
+<input type="submit" value="Find Time " class="btn btn-primary"><br>
+</form>
+
+<p>_______________________________________________________________________________________________________________</p>
+
+<h4>Query for location and distance pattern matching</h4>
+<form method="post" action="{{ url_for('nearlocation') }}" class="form-group">
+<label>Location:</label><input type="text" name="location"><br>
+<label>Distance:</label><input type="text" name="distance"><br>
+<input type="submit" value="Find Earthquakes" class="btn btn-primary"><br>
+</form>
+<p>Earthquakes within this Range</p>
+<table style="width:100%">
+
+{% if sourcedata %}
+{% for values1 in sourcedata %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+        <td>{{values1[16]}}</td>
+	<td>{{values1[17]}}</td>
+	<td>{{values1[18]}}</td>
+	<td>{{values1[19]}}</td>
+	<td>{{values1[20]}}</td>
+	<td>{{values1[21]}}</td>
+
+		
+ </tr>
+{% endfor %}
+{% endif %}
+</table>
+<p>________________________________________________________________________________________________________________________</p>
+<h4>Do earthquakes occur more at night </h4>
+<form method="post" action="{{ url_for('morequakes') }}" class="form-group">
+<input type="text" name="mag"><br>
+<input type="submit" value="Execute Query" class="btn btn-primary"><br>
+<div><b>
+<p>The number of earthquakes that occur at night is:
+{% if count4 %}
+{{ count4 }}
+{% endif %}<br>
+</b></div>
+<p>The number of earthquakes that occur during daytime is:
+{% if count5 %}
+{{ count5 }}
+{% endif %}<br>
+</b></div>
+<p>Final Result:
+{% if queryres %}
+{{ queryres }}
+{% endif %}<br>
+</b></div>
+
+<table style="width:100%">
+{% if data10 %}
+{% for values1 in data10 %}
+  <tr>
+    <td>{{values1[0]}}</td>
+    <td>{{values1[1]}}</td>
+	<td>{{values1[2]}}</td>
+	<td>{{values1[3]}}</td>
+	<td>{{values1[4]}}</td>
+	<td>{{values1[5]}}</td>
+	<td>{{values1[6]}}</td>
+	<td>{{values1[7]}}</td>
+	<td>{{values1[8]}}</td>
+	<td>{{values1[9]}}</td>
+	<td>{{values1[10]}}</td>
+	<td>{{values1[11]}}</td>
+	<td>{{values1[12]}}</td>
+	<td>{{values1[13]}}</td>
+	<td>{{values1[14]}}</td>
+	<td>{{values1[15]}}</td>
+		
+  </tr>
+{% endfor %}
+
+
+{% endif %}
+</table>
+</form>
+
+</body>
+</html>
